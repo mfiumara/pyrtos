@@ -1,0 +1,25 @@
+manifest:
+  defaults:
+    remote: zephyrproject
+
+  remotes:
+    - name: zephyrproject
+      url-base: https://github.com/zephyrproject-rtos
+    - name: micropython
+      url-base: https://github.com/micropython
+  #
+  # Please add items below based on alphabetical order
+  projects:
+    - name: zephyr
+      import: true
+      path: zephyr
+      remote: zephyrproject
+      revision: v2.5.0
+      west-commands: scripts/west-commands.yml
+    - name: micropython
+      path: micropython
+      remote: micropython
+      revision: master
+
+  self:
+    path: pyrtos
